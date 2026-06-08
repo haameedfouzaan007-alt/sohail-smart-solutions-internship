@@ -1,6 +1,6 @@
 # Sohail Smart Solutions Internship
 
-This repository contains my internship-related work completed during my remote internship with Sohail Smart Solutions.
+This repository contains my internship related work completed during my internship with Sohail Smart Solutions.
 
 ## About This Repository
 
