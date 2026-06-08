@@ -1,4 +1,4 @@
-# Task 2: Binary Search Implementation in C++
+# Week 1 - Task 2: Binary Search Implementation in C++
 
 ## Concept Selected
 Binary Search
