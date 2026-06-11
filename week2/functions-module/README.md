@@ -94,7 +94,7 @@ The program will run the test cases and display the results in the terminal.
 
 The program was executed once, and the output screenshot shows all four required test cases in a single run.
 
-The program was tested by running `main.py`. Each reusable function was tested at least once through the output shown in the terminal.
+The program was tested by running `main.py`. Each reusable function was tested at least once, and the results are shown in the terminal output.
 
 ---
 
