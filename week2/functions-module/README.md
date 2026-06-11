@@ -90,55 +90,60 @@ The program will run the test cases and display the results in the terminal.
 
 ---
 
-## Test Cases
-
-## Test Case 1 – Student Exists
-
-The program searches for an existing student named `Haameed`.
-
-Expected result:
-
-```text
-Haameed studies at: AURAK
-```
-
-## Test Case 2 – Student Does Not Exist
-
-The program searches for a student named `Omar`, who is not available in the sample data.
-
-Expected result:
-
-```text
-Student not found.
-```
-
-## Test Case 3 – Add New Student
-
-The program adds a new student named `Mariam` with the university `Khalifa University`.
-
-Expected result:
-
-```text
-The updated student records should include Mariam.
-```
-
-## Test Case 4 – Unique Universities
-
-The program displays all unique universities from the student records.
-
-Expected result:
-
-```text
-Repeated university names should not be duplicated.
-```
-
----
-
 ## Output Evidence
 
-A screenshot of the program output is included in the `screenshots` folder. The screenshot shows that all required test cases were executed successfully.
+The program was executed once, and the output screenshot shows all four required test cases in a single run.
+
+The program was tested by running `main.py`. Each reusable function was tested at least once through the output shown in the terminal.
 
 ---
+
+### Test Case 1 – Student Exists
+
+The program searched for an existing student named `Haameed`.
+
+**Expected Result:** The program should return the university name.
+
+**Actual Result:** `Haameed studies at: AURAK`
+
+**Status:** Passed
+
+---
+
+### Test Case 2 – Student Does Not Exist
+
+The program searched for a student named `Omar`, who was not available in the sample data.
+
+**Expected Result:** The program should show that the student was not found.
+
+**Actual Result:** `Student not found.`
+
+**Status:** Passed
+
+---
+
+### Test Case 3 – New Student is Added
+
+The program added a new student named `Mariam` with the university `Khalifa University`.
+
+**Expected Result:** The updated student records should include Mariam.
+
+**Actual Result:** The updated dictionary included `Mariam: Khalifa University`.
+
+**Status:** Passed
+
+---
+
+### Test Case 4 – Unique Universities Displayed
+
+The program displayed all unique universities from the student records.
+
+**Expected Result:** Repeated university names should not be duplicated.
+
+**Actual Result:** The program displayed unique universities including `AURAK`, `University of Sharjah`, and `Khalifa University`.
+
+**Status:** Passed
+
 
 ## Learning Outcome
 
