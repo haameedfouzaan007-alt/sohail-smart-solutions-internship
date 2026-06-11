@@ -1,4 +1,9 @@
-# Main program to test student_utils module
+"""
+Main program for the Functions and Modules task.
+
+This file imports the student_utils module and tests the reusable functions
+using sample student data.
+"""
 
 import student_utils
 
