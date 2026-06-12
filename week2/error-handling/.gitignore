@@ -1,0 +1,17 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environment folders
+venv/
+.env/
+
+# VS Code settings
+.vscode/
+
+# PyCharm project settings
+.idea/
+
+# Temporary files
+*.log
+*.tmp
