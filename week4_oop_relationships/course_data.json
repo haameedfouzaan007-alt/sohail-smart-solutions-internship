@@ -1,0 +1,20 @@
+{
+    "course_name": "Python OOP Level 2",
+    "students": [
+        {
+            "student_id": "S001",
+            "name": "Haameed",
+            "grade": 85
+        },
+        {
+            "student_id": "S002",
+            "name": "Ahmed",
+            "grade": 78
+        },
+        {
+            "student_id": "S003",
+            "name": "Sara",
+            "grade": 92
+        }
+    ]
+}

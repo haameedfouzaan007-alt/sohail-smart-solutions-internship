@@ -168,3 +168,95 @@ Before this task, I mostly focused on creating one class and making it work. In 
 The `Student` class handles individual student information, while the `Course` class manages a collection of students and performs operations on them.
 
 Overall, this task improved my understanding of object relationships and gave me more confidence in working with object-oriented designs.
+
+
+## Task 2 — Making Data Last: File Persistence with JSON
+
+### Part 1 — Learn
+
+### Why Programs Need to Save State
+
+Programs need to save state because data stored only in memory is temporary. While a Python program is running, variables and objects exist in memory. However, once the program is closed, all that data is lost.
+
+For example, if I create student objects during program execution and then close the program, those students will no longer exist unless the data has been saved externally. This type of data is known as in-memory data.
+
+Persistent data, on the other hand, is stored outside the program, typically in a file or database. This allows the program to reload the data when it is run again. In real-world applications, persistence is essential because users expect their data to remain available even after closing and reopening the application.
+
+### What JSON Is and Why It Is Used
+
+JSON stands for JavaScript Object Notation. It is a lightweight and widely used format for storing and exchanging data.
+
+JSON is popular because it is easy for both humans and machines to read and understand. It is commonly used in APIs, configuration files, datasets, and web applications. JSON represents data using key-value pairs, which closely resemble Python dictionaries.
+
+Example:
+
+```json
+{
+    "name": "Haameed",
+    "grade": 85
+}
+```
+
+This structure is simple, readable, and easy to work with.
+
+### Reading and Writing Files in Python
+
+Python provides built-in support for reading and writing files using the `open()` function.
+
+To write data to a file, we use `"w"` mode, and to read data, we use `"r"` mode.
+
+It is considered best practice to use the `with open()` statement, as it automatically handles closing the file after the operation is complete. This approach is known as using a context manager.
+
+Example:
+
+```python
+with open("data.txt", "w") as file:
+    file.write("Hello")
+```
+
+Using `with` ensures that file handling is both safe and efficient.
+
+### The JSON Module
+
+Python includes a built-in `json` module that simplifies working with JSON data.
+
+The `json.dump()` function is used to write Python data structures to a JSON file.
+
+The `json.load()` function is used to read data from a JSON file and convert it back into Python objects.
+
+In this project, I used `json.dump()` to store course and student data in a file named `course_data.json`, and `json.load()` to retrieve and reconstruct that data.
+
+### Converting Objects to Saveable Data and Back
+
+Python objects cannot be directly stored in JSON format. Therefore, they must first be converted into a dictionary representation.
+
+In this project, I implemented a `to_dict()` method to convert objects into dictionaries. For the `Student` class, this was simplified by using the `__dict__` attribute, which automatically stores an object's attributes as a dictionary.
+
+Example:
+
+```python
+def to_dict(self):
+    return self.__dict__
+```
+
+To recreate objects from saved data, I implemented a `from_dict()` method. This method takes a dictionary and uses it to construct a new `Student` object.
+
+This approach allowed me to effectively save object data to a JSON file and restore it when needed.
+
+---
+
+## Part 2 — Apply
+
+### How My Data Is Saved and Restored
+
+In this updated version of the project, I implemented file persistence using JSON.
+
+Previously, the program stored data only during runtime. Once the program was closed, all course and student information was lost. To address this, I added two methods: `save_to_file()` and `load_from_file()`.
+
+The `save_to_file()` method converts course and student objects into dictionary format and saves them to a JSON file named `course_data.json`.
+
+The `load_from_file()` method reads the JSON file and reconstructs the `Course` and `Student` objects from the stored data.
+
+Additionally, I used `try/except` blocks when reading from and writing to files. This ensures that the program can handle potential errors gracefully, such as missing files or invalid JSON data.
+
+This task helped me clearly understand the difference between temporary in-memory data and persistent data stored in external files.
