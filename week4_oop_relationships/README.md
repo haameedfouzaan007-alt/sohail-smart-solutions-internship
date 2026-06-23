@@ -159,23 +159,6 @@ python main.py
 
 ---
 
-## Sample Output
-
-```text
-Course Summary
---------------
-Course Name: Python OOP Level 2
-
-Students Enrolled:
-ID: S001, Name: Haameed, Grade: 85
-ID: S002, Name: Ahmed, Grade: 78
-ID: S003, Name: Sara, Grade: 92
-
-Average Grade: 85.0
-```
-
----
-
 ## Reflection
 
 This task helped me understand that object-oriented programming is not only about creating classes, but also about connecting classes together.
