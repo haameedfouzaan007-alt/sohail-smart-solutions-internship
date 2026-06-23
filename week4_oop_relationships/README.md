@@ -169,6 +169,8 @@ The `Student` class handles individual student information, while the `Course` c
 
 Overall, this task improved my understanding of object relationships and gave me more confidence in working with object-oriented designs.
 
+---
+
 
 ## Task 2 — Making Data Last: File Persistence with JSON
 
@@ -260,3 +262,5 @@ The `load_from_file()` method reads the JSON file and reconstructs the `Course` 
 Additionally, I used `try/except` blocks when reading from and writing to files. This ensures that the program can handle potential errors gracefully, such as missing files or invalid JSON data.
 
 This task helped me clearly understand the difference between temporary in-memory data and persistent data stored in external files.
+
+---
