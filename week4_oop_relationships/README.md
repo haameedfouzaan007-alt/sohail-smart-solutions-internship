@@ -1,4 +1,42 @@
-# OOP Level 2 — Relationships Between Objects
+# Week 4 — OOP Relationships and JSON Persistence
+
+## Project Overview
+
+This project was completed as part of Week 4 of my internship at Sohail Smart Solutions.
+
+The project started with object-oriented programming relationships, where I extended my previous Student Management System into a two-class design using `Student` and `Course`. After that, I improved the same project by adding file persistence using JSON, so the program can save data and load it again later.
+
+This helped me understand two important ideas:
+
+* How multiple classes can work together in a real program
+* How program data can be saved permanently using JSON files
+
+---
+
+## Tasks Covered
+
+### Task 1 — OOP Level 2: Relationships Between Objects
+
+The first task focused on object relationships in Python. I used a `Student` class to represent one student and a `Course` class to manage multiple student objects.
+
+### Task 2 — Making Data Last: File Persistence with JSON
+
+The second task focused on saving and loading data. I added JSON persistence so the course and student data can be saved into a file and restored when the program runs again.
+
+---
+
+## Files Used
+
+* `student.py` — contains the `Student` class
+* `course.py` — contains the `Course` class and JSON save/load methods
+* `main.py` — creates data, saves it, loads it back, and prints the output
+* `course_data.json` — stores the saved course and student data
+* `README.md` — explains the project, learning, and implementation
+* `screenshots/` — contains output and JSON proof screenshots
+
+---
+
+# Task 1 — OOP Level 2: Relationships Between Objects
 
 ## Part 1 — Learn
 
@@ -54,27 +92,9 @@ This helped me understand that real software is usually made from multiple class
 
 ## Part 2 — Apply
 
-## Project Overview
+### Two-Class Design
 
-This project was completed as part of Week 4 of my internship at Sohail Smart Solutions.
-
-The goal of this task was to extend my previous Student Management System into a two-class design. In the previous OOP task, I worked with a single `Student` class. In this task, I added a `Course` class that manages multiple `Student` objects.
-
-This project helped me understand object relationships and how classes can work together in a Python program.
-
----
-
-## Files Used
-
-* `student.py` — contains the `Student` class
-* `course.py` — contains the `Course` class
-* `main.py` — creates the course, adds students, and prints the summary
-* `README.md` — explains the project and the relationship between the classes
-* `screenshot/output.png` — shows the program output
-
----
-
-## Classes Used
+In this project, I used two classes:
 
 ### Student Class
 
@@ -86,7 +106,7 @@ Each student stores:
 * Student Name
 * Grade
 
-The class also includes a method to display student information.
+It also includes a `display()` method to show student details.
 
 ### Course Class
 
@@ -104,9 +124,7 @@ The following methods were implemented:
 * `list_students()`
 * `average_grade()`
 
----
-
-## Relationship Between the Classes
+### Relationship Between the Classes
 
 This project uses composition.
 
@@ -122,73 +140,23 @@ This means the course is connected to student objects. The course can manage stu
 
 ---
 
-## Program Workflow
+# Task 2 — Making Data Last: File Persistence with JSON
 
-The program performs the following steps:
-
-1. Creates a course.
-2. Creates three student objects.
-3. Adds the students to the course.
-4. Displays all enrolled students.
-5. Calculates and displays the average grade.
-
----
-
-## Concepts Practiced
-
-Through this project, I practiced:
-
-* Classes and objects
-* Composition
-* Object relationships
-* Instance attributes
-* Methods
-* Lists of objects
-* Average grade calculation
-* Basic object-oriented programming design
-
----
-
-## How to Run the Program
-
-Open the project folder and run:
-
-```bash
-python main.py
-```
-
----
-
-## Reflection
-
-This task helped me understand that object-oriented programming is not only about creating classes, but also about connecting classes together.
-
-Before this task, I mostly focused on creating one class and making it work. In this project, I learned how one class can contain and manage objects from another class. This made the program more organized and easier to understand.
-
-The `Student` class handles individual student information, while the `Course` class manages a collection of students and performs operations on them.
-
-Overall, this task improved my understanding of object relationships and gave me more confidence in working with object-oriented designs.
-
----
-
-
-## Task 2 — Making Data Last: File Persistence with JSON
-
-### Part 1 — Learn
+## Part 1 — Learn
 
 ### Why Programs Need to Save State
 
-Programs need to save state because data stored only in memory is temporary. While a Python program is running, variables and objects exist in memory. However, once the program is closed, all that data is lost.
+Programs need to save state because data stored only in memory is temporary. While a Python program is running, variables and objects exist in memory. Once the program closes, that data is lost.
 
-For example, if I create student objects during program execution and then close the program, those students will no longer exist unless the data has been saved externally. This type of data is known as in-memory data.
+For example, if I create student objects during program execution and then close the program, those students will no longer exist unless the data has been saved externally. This is called in-memory data.
 
-Persistent data, on the other hand, is stored outside the program, typically in a file or database. This allows the program to reload the data when it is run again. In real-world applications, persistence is essential because users expect their data to remain available even after closing and reopening the application.
+Persistent data means the data is saved outside the program, usually in a file or database. This allows the program to load the data again later. Real applications need this because users expect their information to still be available after closing and reopening the program.
 
 ### What JSON Is and Why It Is Used
 
-JSON stands for JavaScript Object Notation. It is a lightweight and widely used format for storing and exchanging data.
+JSON stands for JavaScript Object Notation. It is a lightweight format used for storing and exchanging data.
 
-JSON is popular because it is easy for both humans and machines to read and understand. It is commonly used in APIs, configuration files, datasets, and web applications. JSON represents data using key-value pairs, which closely resemble Python dictionaries.
+JSON is widely used because it is easy for both humans and programs to read. APIs, configuration files, datasets, and web applications often use JSON. It stores data using key-value pairs, which is very similar to Python dictionaries.
 
 Example:
 
@@ -203,11 +171,11 @@ This structure is simple, readable, and easy to work with.
 
 ### Reading and Writing Files in Python
 
-Python provides built-in support for reading and writing files using the `open()` function.
+Python can read and write files using the `open()` function.
 
-To write data to a file, we use `"w"` mode, and to read data, we use `"r"` mode.
+To write data to a file, we use `"w"` mode. To read data from a file, we use `"r"` mode.
 
-It is considered best practice to use the `with open()` statement, as it automatically handles closing the file after the operation is complete. This approach is known as using a context manager.
+It is better to use `with open()` because it automatically closes the file after the work is done. This is called a context manager.
 
 Example:
 
@@ -216,23 +184,23 @@ with open("data.txt", "w") as file:
     file.write("Hello")
 ```
 
-Using `with` ensures that file handling is both safe and efficient.
+Using `with` makes file handling cleaner and safer.
 
 ### The JSON Module
 
-Python includes a built-in `json` module that simplifies working with JSON data.
+Python has a built-in `json` module that helps work with JSON files.
 
-The `json.dump()` function is used to write Python data structures to a JSON file.
+The `json.dump()` function is used to write Python data into a JSON file.
 
-The `json.load()` function is used to read data from a JSON file and convert it back into Python objects.
+The `json.load()` function is used to read JSON data from a file and bring it back into Python.
 
-In this project, I used `json.dump()` to store course and student data in a file named `course_data.json`, and `json.load()` to retrieve and reconstruct that data.
+In this project, I used `json.dump()` to save course and student data into `course_data.json`. I used `json.load()` to read the saved data back into the program.
 
-### Converting Objects to Saveable Data and Back
+### Turning Objects Into Saveable Data and Back
 
-Python objects cannot be directly stored in JSON format. Therefore, they must first be converted into a dictionary representation.
+Python objects cannot be saved directly into JSON in a simple way. So first, the object needs to be converted into a dictionary.
 
-In this project, I implemented a `to_dict()` method to convert objects into dictionaries. For the `Student` class, this was simplified by using the `__dict__` attribute, which automatically stores an object's attributes as a dictionary.
+In this project, I used a `to_dict()` method to convert objects into dictionary format. For the `Student` class, I connected this to the `__dict__` idea because `__dict__` stores the object attributes as a dictionary.
 
 Example:
 
@@ -241,9 +209,9 @@ def to_dict(self):
     return self.__dict__
 ```
 
-To recreate objects from saved data, I implemented a `from_dict()` method. This method takes a dictionary and uses it to construct a new `Student` object.
+To rebuild the object later, I used a `from_dict()` method. This method takes the saved dictionary and creates a new `Student` object from it.
 
-This approach allowed me to effectively save object data to a JSON file and restore it when needed.
+This helped me understand how object data can be saved into a JSON file and restored later.
 
 ---
 
@@ -251,16 +219,149 @@ This approach allowed me to effectively save object data to a JSON file and rest
 
 ### How My Data Is Saved and Restored
 
-In this updated version of the project, I implemented file persistence using JSON.
+In this updated version of the project, I added file persistence using JSON.
 
-Previously, the program stored data only during runtime. Once the program was closed, all course and student information was lost. To address this, I added two methods: `save_to_file()` and `load_from_file()`.
+Before adding JSON, the program only stored data while it was running. Once the program closed, the course and student details were lost. To solve this, I added two methods:
 
-The `save_to_file()` method converts course and student objects into dictionary format and saves them to a JSON file named `course_data.json`.
+* `save_to_file(filename)`
+* `load_from_file(filename)`
 
-The `load_from_file()` method reads the JSON file and reconstructs the `Course` and `Student` objects from the stored data.
+The `save_to_file()` method converts the course and student objects into dictionary format and saves them into a JSON file called `course_data.json`.
 
-Additionally, I used `try/except` blocks when reading from and writing to files. This ensures that the program can handle potential errors gracefully, such as missing files or invalid JSON data.
+The `load_from_file()` method reads the JSON file and rebuilds the `Course` object and the `Student` objects from the saved data.
 
-This task helped me clearly understand the difference between temporary in-memory data and persistent data stored in external files.
+I also used `try/except` while reading and writing files. This helps the program handle errors properly, such as when the file does not exist or when the JSON file has invalid data.
 
 ---
+
+## Program Workflow
+
+The program follows this flow:
+
+1. Create a course.
+2. Create three student objects.
+3. Add the students to the course.
+4. Display the original course data.
+5. Save the data into `course_data.json`.
+6. Simulate closing and restarting the program.
+7. Load the data back from the JSON file.
+8. Display the loaded data to confirm everything is restored.
+
+---
+
+## Concepts Practiced
+
+Through this project, I practiced:
+
+* Classes and objects
+* Composition
+* Object relationships
+* Instance attributes
+* Lists of objects
+* File handling
+* Context managers
+* JSON saving and loading
+* `json.dump()`
+* `json.load()`
+* `to_dict()`
+* `from_dict()`
+* `__dict__`
+* Error handling with `try/except`
+
+---
+
+## How to Run the Program
+
+Open the project folder and run:
+
+```bash
+python main.py
+```
+
+---
+
+## Sample Output
+
+```text
+Original Course Data
+--------------------
+Course Name: Python OOP Level 2
+
+Students Enrolled:
+ID: S001, Name: Haameed, Grade: 85
+ID: S002, Name: Ahmed, Grade: 78
+ID: S003, Name: Sara, Grade: 92
+
+Average Grade: 85.0
+
+Data saved successfully to course_data.json
+
+Simulating program close and restart
+------------------------------------
+
+Data loaded successfully from course_data.json
+
+Loaded Course Data
+------------------
+Course Name: Python OOP Level 2
+
+Students Enrolled:
+ID: S001, Name: Haameed, Grade: 85
+ID: S002, Name: Ahmed, Grade: 78
+ID: S003, Name: Sara, Grade: 92
+
+Average Grade: 85.0
+```
+
+---
+
+## JSON File Example
+
+The saved data is stored in `course_data.json`.
+
+Example:
+
+```json
+{
+    "course_name": "Python OOP Level 2",
+    "students": [
+        {
+            "student_id": "S001",
+            "name": "Haameed",
+            "grade": 85
+        },
+        {
+            "student_id": "S002",
+            "name": "Ahmed",
+            "grade": 78
+        },
+        {
+            "student_id": "S003",
+            "name": "Sara",
+            "grade": 92
+        }
+    ]
+}
+```
+
+---
+
+## Screenshots
+
+The `screenshots` folder contains evidence of:
+
+* OOP relationship output
+* JSON save and load output
+* `course_data.json` file proof
+
+---
+
+## Reflection
+
+This Week 4 project helped me understand that object-oriented programming is not only about creating classes, but also about connecting classes together and managing data properly.
+
+In Task 1, I learned how the `Course` class can contain multiple `Student` objects. This made the program more organized because each class had its own role. The `Student` class handled individual student information, while the `Course` class managed a group of students.
+
+In Task 2, I learned why saving data is important. Before using JSON, the program forgot everything after it closed. After adding `save_to_file()` and `load_from_file()`, the program was able to save the course data and restore it again.
+
+Overall, this project improved my understanding of object relationships, JSON file handling, and how real programs keep data after they close.
