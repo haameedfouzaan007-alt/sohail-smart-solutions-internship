@@ -1,0 +1,42 @@
+[
+    {
+        "course_name": "Python OOP",
+        "students": [
+            {
+                "student_id": "S001",
+                "name": "Haameed",
+                "grade": 85
+            },
+            {
+                "student_id": "S002",
+                "name": "Ahmed",
+                "grade": 78
+            }
+        ]
+    },
+    {
+        "course_name": "Data Handling",
+        "students": [
+            {
+                "student_id": "S003",
+                "name": "Sara",
+                "grade": 92
+            },
+            {
+                "student_id": "S004",
+                "name": "Mariam",
+                "grade": 88
+            }
+        ]
+    },
+    {
+        "course_name": "AI Basics",
+        "students": [
+            {
+                "student_id": "S005",
+                "name": "Omar",
+                "grade": 74
+            }
+        ]
+    }
+]
