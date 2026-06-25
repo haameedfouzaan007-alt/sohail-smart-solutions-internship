@@ -49,11 +49,11 @@ This flow helped me understand how a small real program works from start to end.
 
 ### Separation of Concerns
 
-Separation of concerns means each part of the program should have its own job.
+Separation of concerns means each part of the program has its own job.
 
-In this project, the OOP code manages the student and course records. The JSON part saves and loads the data. The pandas part analyzes the data.
+In this project, the OOP code manages the student and course records. The JSON part saves and loads the data, and the pandas part analyzes the data.
 
-This makes the project cleaner because each file focuses on one main responsibility.
+This makes the project cleaner and easier to understand.
 
 ---
 
