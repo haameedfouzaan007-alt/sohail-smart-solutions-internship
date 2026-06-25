@@ -2,7 +2,7 @@
 
 This repository contains my internship tasks, source code, documentation, screenshots, and project work completed during my internship with **Sohail Smart Solutions**.
 
-The main purpose of this repository is to keep all my internship work organized in one place and show my learning progress week by week.
+The main purpose of this repository is to keep my internship work organized in one place and show my learning progress week by week.
 
 ---
 
@@ -33,9 +33,11 @@ Throughout the internship, I am using this repository to track my progress, orga
 * Google Colab
 * Markdown
 * JSON
+* CSV
 * pandas
 
 ---
+
 ## Repository Structure
 
 ```text
@@ -65,6 +67,16 @@ sohail-smart-solutions-internship/
 │   ├── week4_pandas_intro.ipynb
 │   ├── students.csv
 │   └── README.md
+│
+├── week4_student_analytics/
+│   ├── student.py
+│   ├── course.py
+│   ├── analytics.py
+│   ├── main.py
+│   ├── students_data.json
+│   ├── students.csv
+│   ├── README.md
+│   └── screenshots/
 │
 ├── README.md
 └── .gitignore
@@ -133,9 +145,9 @@ This helped me understand how programs can be organized using objects instead of
 
 ---
 
-### Week 4 — OOP Relationships, JSON, and pandas
+### Week 4 — OOP Relationships, JSON, pandas, and Mini-Project
 
-In Week 4, I continued with object-oriented programming and started moving toward data handling.
+In Week 4, I continued with object-oriented programming and started moving toward data handling and analysis.
 
 #### Task 1: OOP Level 2 — Relationships Between Objects
 
@@ -205,6 +217,34 @@ Main concepts practiced:
 
 This task helped me understand how Python is used for data-related work, which is important for Artificial Intelligence projects.
 
+#### Task 4: Mini-Project — Structured Student Analytics Tool
+
+Folder:
+
+```text
+week4_student_analytics/
+```
+
+In this mini-project, I combined the main concepts I learned into one small working tool.
+
+The project uses OOP classes to manage student and course records, saves and loads data using JSON, exports the records to CSV, and uses pandas to produce student analytics.
+
+Main concepts practiced:
+
+* Clean project structure
+* Object-oriented programming
+* `Student` and `Course` classes
+* JSON save and load
+* Error handling with `try/except`
+* CSV export
+* pandas analysis
+* Separation of concerns
+* Complete README documentation
+
+The tool produces basic insights such as average grade per course, top student, number of students per course, and students who scored above 80.
+
+This task helped me understand how different parts of a Python project can work together in one complete mini-project.
+
 ---
 
 ## Learning Focus
@@ -218,8 +258,9 @@ This internship is helping me improve step by step in:
 * README writing
 * Error handling
 * JSON file handling
+* CSV file handling
 * Basic data analysis using pandas
-* Writing simple documentation for projects
+* Writing documentation for projects
 
 I am still learning and practicing, but this repository shows my progress through each task.
 
