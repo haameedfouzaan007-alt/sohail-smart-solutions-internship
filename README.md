@@ -1,8 +1,8 @@
 # Sohail Smart Solutions Internship
 
-This repository contains my internship tasks, source code, documentation, screenshots, and project work completed during my internship with **Sohail Smart Solutions**.
+This repository contains my internship tasks, source code, documentation, screenshots, notebooks, and project work completed during my internship with **Sohail Smart Solutions**.
 
-The main purpose of this repository is to keep my internship work organized in one place and show my learning progress week by week.
+The main purpose of this repository is to keep my internship work organized in one place and show my learning progress week by week. It also helps me practice using GitHub in a more professional way.
 
 ---
 
@@ -12,14 +12,24 @@ The main purpose of this repository is to keep my internship work organized in o
 * **University:** American University of Ras Al Khaimah (AURAK)
 * **Major:** Artificial Intelligence
 * **Internship Site:** Sohail Smart Solutions
+* **Internship Mode:** Remote / Online
 
 ---
 
 ## About This Repository
 
-This repository includes weekly internship tasks, programming practice, project files, README documentation, screenshots, and supporting materials.
+This repository includes my weekly internship tasks, programming practice, project files, README documentation, screenshots, Colab notebooks, and supporting materials.
 
-Throughout the internship, I am using this repository to track my progress, organize my work, and practice a professional GitHub workflow.
+Throughout the internship, I am using this repository to:
+
+* Track my weekly progress
+* Organize my code and documentation
+* Practice Git and GitHub workflow
+* Improve my programming and documentation skills
+* Build small projects step by step
+* Connect programming concepts with data and AI-related work
+
+I am still learning and improving, so this repository also shows my progress from basic programming tasks to more structured Python and data-related projects.
 
 ---
 
@@ -27,14 +37,15 @@ Throughout the internship, I am using this repository to track my progress, orga
 
 * Python
 * C++
-* GitHub
 * Git
+* GitHub
 * Visual Studio Code
 * Google Colab
 * Markdown
 * JSON
 * CSV
 * pandas
+* matplotlib
 
 ---
 
@@ -78,6 +89,17 @@ sohail-smart-solutions-internship/
 │   ├── README.md
 │   └── screenshots/
 │
+├── week5_data_cleaning/
+│   ├── week5_data_cleaning.ipynb
+│   ├── messy_students.csv
+│   ├── cleaned_students.csv
+│   └── README.md
+│
+├── week5_visualization/
+│   ├── week5_visualization.ipynb
+│   ├── cleaned_students.csv
+│   └── README.md
+│
 ├── README.md
 └── .gitignore
 ```
@@ -86,11 +108,11 @@ sohail-smart-solutions-internship/
 
 ## Weekly Work Summary
 
-### Week 1 — Internship Onboarding and Programming Basics
+## Week 1 — Internship Onboarding and Programming Basics
 
 In Week 1, I worked on internship onboarding, self-assessment, GitHub basics, and programming fundamentals.
 
-Main work completed:
+### Main Work Completed
 
 * Internship onboarding assessment
 * Self-assessment and learning goals
@@ -99,13 +121,17 @@ Main work completed:
 * Python Grade Calculator project
 * README writing and documentation practice
 
+### What I Learned
+
+This week helped me understand the basic expectations of the internship. I also started practicing how to organize my work and upload tasks properly to GitHub.
+
 ---
 
-### Week 2 — Python Fundamentals and Error Handling
+## Week 2 — Python Fundamentals and Error Handling
 
 In Week 2, I practiced Python fundamentals and worked on small projects to improve my coding confidence.
 
-Main work completed:
+### Main Work Completed
 
 * Student Management System
 * Functions and modules practice
@@ -115,21 +141,25 @@ Main work completed:
 * README documentation
 * Testing screenshots
 
-This week helped me understand how to write cleaner Python code and how to handle user mistakes without crashing the program.
+### What I Learned
+
+This week helped me understand how to write cleaner Python code. I also learned how to handle user mistakes without crashing the program.
+
+The error handling task was useful because it showed me why defensive programming is important in real applications.
 
 ---
 
-### Week 3 — Object-Oriented Programming
+## Week 3 — Object-Oriented Programming
 
 In Week 3, I worked on object-oriented programming by rebuilding the Student Management System using classes and objects.
 
-Main project:
+### Main Project
 
 ```text
 week3/oop-student-system/
 ```
 
-Main concepts practiced:
+### Main Concepts Practiced
 
 * Classes and objects
 * `__init__`
@@ -141,17 +171,23 @@ Main concepts practiced:
 * Error handling
 * Documentation and screenshots
 
-This helped me understand how programs can be organized using objects instead of only functions and dictionaries.
+### What I Learned
+
+This week helped me understand how programs can be organized using objects instead of only functions and dictionaries.
+
+I also started understanding how classes can make a program easier to manage when the project becomes bigger.
 
 ---
 
-### Week 4 — OOP Relationships, JSON, pandas, and Mini-Project
+## Week 4 — OOP Relationships, JSON, pandas, and Mini-Project
 
 In Week 4, I continued with object-oriented programming and started moving toward data handling and analysis.
 
-#### Task 1: OOP Level 2 — Relationships Between Objects
+---
 
-Folder:
+### Task 1: OOP Level 2 — Relationships Between Objects
+
+### Folder
 
 ```text
 week4_oop_relationships/
@@ -161,7 +197,7 @@ In this task, I extended the Student Management System into a two-class design u
 
 The `Course` class stores multiple `Student` objects. This helped me understand composition and how different classes can work together in a program.
 
-Main concepts practiced:
+### Main Concepts Practiced
 
 * Composition
 * Multiple classes working together
@@ -170,13 +206,15 @@ Main concepts practiced:
 * Average grade calculation
 * README documentation
 
-#### Task 2: Making Data Last — JSON Persistence
+---
+
+### Task 2: Making Data Last — JSON Persistence
 
 This task was added to the same Week 4 OOP project.
 
 I updated the project so it can save course and student data into a JSON file and load it back again later.
 
-Main concepts practiced:
+### Main Concepts Practiced
 
 * JSON files
 * `json.dump()`
@@ -187,11 +225,17 @@ Main concepts practiced:
 * `from_dict()`
 * Error handling with `try/except`
 
+### What I Learned
+
 This helped me understand the difference between temporary in-memory data and persistent data saved in a file.
 
-#### Task 3: Bridge to Data — pandas Introduction
+Before learning JSON, the data was lost when the program stopped. After adding JSON, the data could be saved and loaded again.
 
-Folder:
+---
+
+### Task 3: Bridge to Data — pandas Introduction
+
+### Folder
 
 ```text
 week4_pandas_intro/
@@ -201,7 +245,7 @@ In this task, I started learning pandas, which is used for working with data in 
 
 I created a small CSV file with student records, loaded it using pandas, inspected the data, and answered basic questions using filtering and statistics.
 
-Main concepts practiced:
+### Main Concepts Practiced
 
 * CSV files
 * pandas DataFrames
@@ -215,11 +259,15 @@ Main concepts practiced:
 * `.mean()`
 * `.value_counts()`
 
+### What I Learned
+
 This task helped me understand how Python is used for data-related work, which is important for Artificial Intelligence projects.
 
-#### Task 4: Mini-Project — Structured Student Analytics Tool
+---
 
-Folder:
+### Task 4: Mini-Project — Structured Student Analytics Tool
+
+### Folder
 
 ```text
 week4_student_analytics/
@@ -229,7 +277,7 @@ In this mini-project, I combined the main concepts I learned into one small work
 
 The project uses OOP classes to manage student and course records, saves and loads data using JSON, exports the records to CSV, and uses pandas to produce student analytics.
 
-Main concepts practiced:
+### Main Concepts Practiced
 
 * Clean project structure
 * Object-oriented programming
@@ -241,9 +289,95 @@ Main concepts practiced:
 * Separation of concerns
 * Complete README documentation
 
-The tool produces basic insights such as average grade per course, top student, number of students per course, and students who scored above 80.
+### Output / Insights
+
+The tool produces basic insights such as:
+
+* Average grade per course
+* Top student
+* Number of students per course
+* Students who scored above 80
+
+### What I Learned
 
 This task helped me understand how different parts of a Python project can work together in one complete mini-project.
+
+It also helped me move from simple programming tasks toward data-related work.
+
+---
+
+## Week 5 — Data Cleaning and Visualization
+
+In Week 5, I started working with more realistic data tasks. The main focus was understanding that real-world data is not always clean and that cleaned data can be understood better using charts.
+
+---
+
+### Task 1: Real Data Is Messy — Data Cleaning with pandas
+
+### Folder
+
+```text
+week5_data_cleaning/
+```
+
+In this task, I practiced cleaning messy data using pandas.
+
+I used a deliberately messy student CSV file based on my Week 4 student analytics data. The dataset included missing values, duplicate rows, inconsistent text formatting, and wrong data types.
+
+### Main Concepts Practiced
+
+* Loading CSV files using pandas
+* Checking dataset information using `.info()`
+* Finding missing values using `.isnull().sum()`
+* Finding duplicate rows using `.duplicated().sum()`
+* Removing duplicates using `.drop_duplicates()`
+* Cleaning text using `.str.strip()`, `.str.lower()`, and `.str.title()`
+* Fixing numeric data using `pd.to_numeric()`
+* Comparing data before and after cleaning
+
+### What I Learned
+
+This task helped me understand that data cleaning is an important step before analysis or machine learning.
+
+Even small problems like extra spaces, missing values, duplicate records, or wrong data types can affect the final result.
+
+---
+
+### Task 2: Seeing the Data — Visualization with matplotlib
+
+### Folder
+
+```text
+week5_visualization/
+```
+
+In this task, I used the cleaned dataset from the data cleaning task and created charts using matplotlib.
+
+The goal was to understand the data visually instead of only reading it in table form.
+
+### Charts Created
+
+* Bar chart: Average grade per course
+* Histogram: Distribution of student grades
+* Scatter plot: Student number vs grade
+* Bar chart: Number of students per course
+
+### Main Concepts Practiced
+
+* Loading cleaned CSV data
+* Using matplotlib for visualization
+* Creating bar charts
+* Creating histograms
+* Creating scatter plots
+* Adding chart titles
+* Adding x-axis and y-axis labels
+* Writing short insights under each chart
+
+### What I Learned
+
+This task helped me understand that visualization makes data easier to read and explain.
+
+A table can show the values, but charts make it easier to notice patterns, comparisons, and distributions. This is useful in data analysis and AI work because we need to understand the data before building any model.
 
 ---
 
@@ -252,17 +386,28 @@ This task helped me understand how different parts of a Python project can work 
 This internship is helping me improve step by step in:
 
 * Python programming
+* C++ basics
 * Object-oriented programming
-* GitHub workflow
+* Git and GitHub workflow
 * Project organization
 * README writing
 * Error handling
 * JSON file handling
 * CSV file handling
+* Data cleaning using pandas
 * Basic data analysis using pandas
+* Data visualization using matplotlib
 * Writing documentation for projects
 
 I am still learning and practicing, but this repository shows my progress through each task.
+
+---
+
+## Current Progress
+
+So far, I have moved from basic programming tasks to more structured Python projects and basic data analysis work.
+
+The internship has helped me understand how coding, file handling, data cleaning, and visualization connect together in practical projects.
 
 ---
 
